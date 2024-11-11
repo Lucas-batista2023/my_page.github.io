@@ -101,6 +101,10 @@ section{
     padding-right: 20px;
     flex: 1;
 }
+
+#sobre {
+    flex: 0;
+}
   
 article {
     flex: 4;

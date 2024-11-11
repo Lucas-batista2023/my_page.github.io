@@ -16,12 +16,10 @@ header{
 }
   
 h1, h2 {
-    font-family: 'Sonsie One', cursive;
     color: #2a2a2a;
 }
   
 p, li {
-    font-family: 'Open Sans Condensed', sans-serif;
     color: #2a2a2a;
     font-size: 1.6rem;
     line-height: 1.5;
@@ -57,13 +55,15 @@ nav{
     display: flex;
     margin-bottom: 10px;
     padding-bottom: 20px;
+    justify-content: space-around;
 }
 
 nav ul {
-    padding: 0;
+    padding: 0 10px;
     list-style-type: none;
     flex: 2;
     display: flex;
+    justify-content: space-around;
 }
 
 ul {
@@ -99,6 +99,7 @@ section{
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
+    flex: 1;
 }
   
 article {
@@ -129,3 +130,61 @@ footer {
     margin: 10px;
 }
 
+/* Media Query para telas menores que 768px */
+@media (max-width: 768px) {
+    body {
+        width: 90%; /* Ajuste o tamanho da largura para dispositivos móveis */
+    }
+
+    header, footer {
+        padding: 1rem;
+    }
+
+    /* Flexbox no main: empilhar os elementos verticalmente */
+    main {
+        flex-direction: column; /* Empilha as seções verticalmente */
+    }
+
+    section {
+        flex: 1 100%; /* Cada seção ocupa 100% da largura */
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    article {
+        flex: 1 100%; /* O artigo ocupa toda a largura em telas pequenas */
+    }
+
+    aside {
+        flex: 1 100%; /* O aside ocupa toda a largura em telas pequenas */
+        margin-left: 0;
+        margin-top: 20px; /* Adiciona um pequeno espaçamento entre as seções */
+    }
+
+    /* Ajuste a largura das imagens na seção de fotos */
+    .foto img {
+        width: 100%; /* As imagens vão ocupar toda a largura do contêiner */
+        height: auto;
+    }
+
+    /* Ajuste os tamanhos de texto */
+    h1 {
+        font-size: 3rem; /* Tamanho menor em telas pequenas */
+    }
+
+    h2 {
+        font-size: 2.5rem; /* Tamanho menor em telas pequenas */
+    }
+
+    p, li {
+        font-size: 1.4rem; /* Texto menor para dispositivos móveis */
+    }
+
+    nav a {
+        font-size: 1.5rem; /* Tamanho do texto do menu reduzido */
+    }
+
+    header p {
+        font-size: 1.5em; /* Texto menor no cabeçalho */
+    }
+}

@@ -165,6 +165,7 @@ footer {
     .foto img {
         width: 100%; /* As imagens vão ocupar toda a largura do contêiner */
         height: auto;
+        object-fit: cover;
     }
 
     /* Ajuste os tamanhos de texto */
